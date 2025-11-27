@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerTube API - Powerful YouTube API Wrapper</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <h1>InnerTube API</h1>
+            </div>
+            <p class="tagline">Powerful, Unlimited YouTube API Wrapper</p>
+            <p class="subtitle">No API keys • No authentication • No limits • Just pure power</p>
+
+            <div class="cta-buttons">
+                <a href="/docs" class="btn btn-primary">
+                    <span>📚</span>
+                    Explore API Docs
+                </a>
+                <a href="#features" class="btn btn-secondary">
+                    <span>✨</span>
+                    View Features
+                </a>
+            </div>
+
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>API Status: Online</span>
+            </div>
+        </header>
+
+        <!-- Features Grid -->
+        <section id="features" class="features">
+            <h2 class="section-title">Unlimited Features</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎥</div>
+                    <h3>YouTube Core</h3>
+                    <p>Search videos, get detailed metadata, streaming data, and recommendations</p>
+                    <ul class="feature-list">
+                        <li>Video search & details</li>
+                        <li>Player & streaming data</li>
+                        <li>Trending & homepage</li>
+                        <li>Related videos</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👤</div>
+                    <h3>Channels</h3>
+                    <p>Complete channel information, videos, playlists, and community posts</p>
+                    <ul class="feature-list">
+                        <li>Channel information</li>
+                        <li>Channel videos</li>
+                        <li>Channel playlists</li>
+                        <li>Community posts</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Playlists</h3>
+                    <p>Access playlist details and retrieve all videos in any playlist</p>
+                    <ul class="feature-list">
+                        <li>Playlist metadata</li>
+                        <li>All playlist videos</li>
+                        <li>Pagination support</li>
+                        <li>Video ordering</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Comments</h3>
+                    <p>Retrieve video comments and engage with community discussions</p>
+                    <ul class="feature-list">
+                        <li>Video comments</li>
+                        <li>Comment replies</li>
+                        <li>Comment metadata</li>
+                        <li>Pagination</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>YouTube Music</h3>
+                    <p>Full YouTube Music API support for artists, albums, and playlists</p>
+                    <ul class="feature-list">
+                        <li>Music search</li>
+                        <li>Artist information</li>
+                        <li>Album details</li>
+                        <li>Music playlists</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Advanced Features</h3>
+                    <p>Batch requests, captions, live streams, and powerful utilities</p>
+                    <ul class="feature-list">
+                        <li>Batch processing</li>
+                        <li>Captions/subtitles</li>
+                        <li>Live stream data</li>
+                        <li>YouTube Shorts</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Start -->
+        <section class="quick-start">
+            <h2 class="section-title">Quick Start</h2>
+
+            <div class="code-examples">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>Search Videos</span>
+                        <button class="copy-btn" onclick="copyCode(this, 'search-example')">Copy</button>
+                    </div>
+                    <pre id="search-example"><code>GET /api/search?query=python+tutorial&limit=10
+
+Response:
+{
+  "success": true,
+  "query": "python tutorial",
+  "count": 10,
+  "results": [...]
+}</code></pre>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>Get Video Details</span>
+                        <button class="copy-btn" onclick="copyCode(this, 'video-example')">Copy</button>
+                    </div>
+                    <pre id="video-example"><code>GET /api/video/dQw4w9WgXcQ
+
+Response:
+{
+  "success": true,
+  "video_id": "dQw4w9WgXcQ",
+  "title": "...",
+  "author": "...",
+  "view_count": "..."
+}</code></pre>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>Batch Requests</span>
+                        <button class="copy-btn" onclick="copyCode(this, 'batch-example')">Copy</button>
+                    </div>
+                    <pre id="batch-example"><code>POST /api/batch
+
+Body:
+[
+  {"endpoint": "search", "params": {"query": "music"}},
+  {"endpoint": "trending", "params": {}}
+]</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- API Explorer -->
+        <section class="api-explorer">
+            <h2 class="section-title">Try It Now</h2>
+
+            <div class="explorer-card">
+                <div class="explorer-input">
+                    <label for="endpoint-select">Select Endpoint</label>
+                    <select id="endpoint-select" onchange="updateEndpointExample()">
+                        <option value="/api/search?query=test">Search Videos</option>
+                        <option value="/api/trending">Trending Videos</option>
+                        <option value="/api/video/dQw4w9WgXcQ">Video Details</option>
+                        <option value="/api/music/search?query=rock">Music Search</option>
+                        <option value="/api/analytics">API Analytics</option>
+                    </select>
+                </div>
+
+                <div class="explorer-url">
+                    <label>Full URL</label>
+                    <div class="url-display">
+                        <input type="text" id="api-url" readonly value="">
+                        <button class="btn btn-primary" onclick="testEndpoint()">Test API</button>
+                    </div>
+                </div>
+
+                <div class="explorer-response">
+                    <label>Response</label>
+                    <pre id="response-output"><code>Click "Test API" to see the response...</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats">
+            <div class="stat-card">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">API Endpoints</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Request Limit</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">0</div>
+                <div class="stat-label">API Keys Needed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Open Access</div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Created with ❤️ by <strong>Kobir Shah 🇧🇩 (Bangladesh)</strong></p>
+            <p class="tech-stack">Powered by FastAPI and InnerTube</p>
+            <div class="footer-links">
+                <a href="/docs">API Docs</a>
+                <a href="/redoc">ReDoc</a>
+                <a href="/info">API Info</a>
+                <a href="/health">Health Check</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
