@@ -188,10 +188,14 @@ if __name__ == "__main__":
     logger.info(f"Server running at http://{API_HOST}:{API_PORT}")
     logger.info(f"Documentation available at http://{API_HOST}:{API_PORT}/docs")
     
-    uvicorn.run(
-        "main:app",
-        host=API_HOST,
-        port=API_PORT,
-        reload=True,
-        log_level="info"
-    )
+import os
+
+port = int(os.environ.get("PORT", API_PORT))
+
+uvicorn.run(
+    "main:app",
+    host="0.0.0.0",
+    port=port,
+    reload=False,
+    log_level="info"
+)
