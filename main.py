@@ -181,21 +181,3 @@ async def api_info():
     }
 
 
-if __name__ == "__main__":
-    import uvicorn
-    
-    logger.info(f"Starting {API_TITLE} v{API_VERSION}")
-    logger.info(f"Server running at http://{API_HOST}:{API_PORT}")
-    logger.info(f"Documentation available at http://{API_HOST}:{API_PORT}/docs")
-    
-import os
-
-port = int(os.environ.get("PORT", API_PORT))
-
-uvicorn.run(
-    "main:app",
-    host="0.0.0.0",
-    port=port,
-    reload=False,
-    log_level="info"
-)
